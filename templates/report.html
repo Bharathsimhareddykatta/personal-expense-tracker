@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spending Report</title>
+</head>
+<body>
+    <h1>Spending Report</h1>
+    <h2>Total Spending by Category</h2>
+    <ul>
+        {% for category, amount in spending_by_category.items() %}
+            <li>{{ category }}: ${{ amount }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Spending Trend</h2>
+    <img src="data:image/png;base64,{{ report_img }}" alt="Spending Chart">
+
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

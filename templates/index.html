@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Personal Expense Tracker</h1>
+    <form action="{{ url_for('add_expense_route') }}" method="POST">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category" required>
+            <option value="Groceries">Groceries</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Utilities">Utilities</option>
+        </select><br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required><br><br>
+
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h2><a href="{{ url_for('report') }}">View Spending Report</a></h2>
+</body>
+</html>
