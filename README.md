@@ -7,6 +7,7 @@ Categorize Spending: Expenses are categorized (e.g., Food, Entertainment, Bills)
 View Total Spending: The application displays the total spending by category.
 Generate Reports: Users can generate basic reports with a bar chart of total spending by category.
 CSV Storage: All expenses are stored in a CSV file, which can be exported or analyzed.
+
 Tools & Technologies
 Python: For backend logic and data handling.
 Flask: Web framework used to build the web application.
@@ -40,11 +41,6 @@ python -m venv venv
 Activate the virtual environment:
 
 On Windows:
-
-bash
-Copy code
-.\venv\Scripts\activate
-On macOS/Linux:
 
 bash
 Copy code
